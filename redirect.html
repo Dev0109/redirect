@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a id="uri" href="https://www.huckbit.com"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var uri = document.getElementById("uri");
+    var counter = 0;
+
+    setInterval(function() {
+        counter--;
+
+        if (counter >= 0) {
+            span = document.getElementById("counter");
+            span.innerHTML = counter;
+        }
+
+        // Display 'counter' wherever you want to display it.
+        if (counter === 0) {
+            //    alert('this is where it happens');
+            clearInterval(counter);
+        }
+    }, 0);
+
+    window.setTimeout(function() {
+        // Move to a new location
+        window.location.href = uri.href;
+    }, 0);
+</script>
+
+</html>
